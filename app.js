@@ -41,7 +41,7 @@ app.post('/', (req, res) => {
     const url = 'https://us17.api.mailchimp.com/3.0/lists/cd19c1969f';
     const options = {
         method: 'POST',
-        auth: 'pranit:' + 'process.env.API_KEY',
+        auth: 'pranit:API_KEY',
     };
 
     const request = https.request(url, options, function(response) {
@@ -62,8 +62,3 @@ app.post('/failure', (req, res) => {
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
-//api key
-//6b0d204e38b2ec0bf6e7d68e1ea1728b-us17
-
-//list id
-//cd19c1969f
